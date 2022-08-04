@@ -1,25 +1,16 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.portfolio.portfolio.Entity;
 
 import java.io.Serializable;
-import java.util.Collection;
 import javax.persistence.Basic;
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
-import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
@@ -76,6 +67,7 @@ public class Personas implements Serializable {
     @Size(max = 45)
     @Column(name = "email")
     private String email;
+    /*
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "personas")
     private Collection<Skills> skillsCollection;
     @OneToOne(cascade = CascadeType.ALL, mappedBy = "personas")
@@ -86,8 +78,9 @@ public class Personas implements Serializable {
     private Collection<Educacion> educacionCollection;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "personas")
     private Collection<Proyectos> proyectosCollection;
-    @OneToOne(cascade = CascadeType.ALL, mappedBy = "personas")
-    private Usuarios usuarios;
+    */
+    //@OneToOne(cascade = CascadeType.ALL, mappedBy = "personas")
+    //private Usuarios usuarios;
 
     public Personas() {
     }
@@ -175,7 +168,7 @@ public class Personas implements Serializable {
     public void setEmail(String email) {
         this.email = email;
     }
-
+/*
     @XmlTransient
     public Collection<Skills> getSkillsCollection() {
         return skillsCollection;
@@ -219,14 +212,14 @@ public class Personas implements Serializable {
     public void setProyectosCollection(Collection<Proyectos> proyectosCollection) {
         this.proyectosCollection = proyectosCollection;
     }
+*/
+   // public Usuarios getUsuarios() {
+   //     return usuarios;
+   // }
 
-    public Usuarios getUsuarios() {
-        return usuarios;
-    }
-
-    public void setUsuarios(Usuarios usuarios) {
-        this.usuarios = usuarios;
-    }
+   //public void setUsuarios(Usuarios usuarios) {
+   //    this.usuarios = usuarios;
+   //}
 
     @Override
     public int hashCode() {

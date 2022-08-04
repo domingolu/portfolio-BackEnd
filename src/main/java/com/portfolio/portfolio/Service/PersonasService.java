@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.portfolio.portfolio.Service;
 
 import com.portfolio.portfolio.DTO.IPersonasService;
@@ -17,7 +13,7 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class PersonasService implements IPersonasService {
-    @Autowired 
+    @Autowired //autowired es la inyección de dependencia
     private IPersonasRepository ipersonasRepository;
 
     @Override
